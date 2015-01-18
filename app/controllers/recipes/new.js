@@ -9,9 +9,9 @@ export default Ember.ObjectController.extend({
       var controller = this;
       var recipes = this.get("model");
       this.get("newRecipe").save().then(function(recipe){
-        recipes.addObject("recipe");
-        controller.set("newRecipe", controller.store.createRecord("recipe"))
-      })
+        recipes.addObject(recipe);
+        controller.set("newRecipe", controller.store.createRecord("recipe"));
+      });
     }
   }
 });
