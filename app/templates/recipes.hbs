@@ -5,9 +5,4 @@
 </ul>
 
 <br>
-<h3>Add a Recipe</h3>
-Title: {{textarea valueBinding="newRecipe.title"}}
-<br>
-URL: {{textarea valueBinding="newRecipe.url"}}
-<br>
-<button {{action "createRecipe"}}>Add Recipe</button>
+{{render "recipes/new" this}}
