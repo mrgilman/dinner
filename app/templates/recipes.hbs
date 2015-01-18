@@ -1,8 +1,10 @@
 <ul>
   {{#each existing}}
-    <li><a target="_blank" {{bind-attr href=url}}">{{title}}</a></li>
+    {{#link-to 'recipe' this}}{{title}}{{/link-to}}
   {{/each}}
 </ul>
 
 <br>
 {{render "recipes/new" this}}
+
+{{outlet}}
