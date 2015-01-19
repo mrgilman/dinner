@@ -11,6 +11,7 @@ export default Ember.ObjectController.extend({
       this.get("newRecipe").save().then(function(recipe){
         recipes.get("existing").addObject(recipe);
         controller.set("newRecipe", controller.store.createRecord("recipe"));
+        controller.transitionToRoute("recipe", recipe);
       });
     }
   }
