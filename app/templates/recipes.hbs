@@ -1,10 +1,15 @@
-<ul>
-  {{#each existing}}
-    {{#link-to 'recipe' this}}{{title}}{{/link-to}}
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-md-4">
+    <ul>
+      {{#each existing}}
+        <li>{{#link-to 'recipe' this}}{{title}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
 
-<br>
-{{render "recipes/new" this}}
-
-{{outlet}}
+    <br>
+    {{render "recipes/new" this}}
+  </div>
+  <div class="col-md-8">
+    {{outlet}}
+  </div>
+</div>
